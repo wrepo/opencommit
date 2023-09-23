@@ -51,12 +51,12 @@ export const configValidators = {
     validateConfig(CONFIG_KEYS.OCO_OPENAI_API_KEY, value, 'Cannot be empty');
     validateConfig(
       CONFIG_KEYS.OCO_OPENAI_API_KEY,
-      value.startsWith('sk-'),
-      'Must start with "sk-"'
+      value.startsWith('fk'),
+      'Must start with "fk"'
     );
     validateConfig(
       CONFIG_KEYS.OCO_OPENAI_API_KEY,
-      config[CONFIG_KEYS.OCO_OPENAI_BASE_PATH] || value.length === 51,
+      config[CONFIG_KEYS.OCO_OPENAI_BASE_PATH] || value.length >= 1,
       'Must be 51 characters long'
     );
 
