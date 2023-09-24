@@ -27822,8 +27822,8 @@ var vi_VN_default = {
 // src/i18n/zh_CN.json
 var zh_CN_default = {
   localLanguage: "\u7B80\u4F53\u4E2D\u6587",
-  commitFix: "\u4FEE\u590D(server.ts)\uFF1A\u5C06\u7AEF\u53E3\u53D8\u91CF\u4ECE\u5C0F\u5199port\u6539\u4E3A\u5927\u5199PORT",
-  commitFeat: "\u529F\u80FD(server.ts)\uFF1A\u6DFB\u52A0\u5BF9process.env.PORT\u73AF\u5883\u53D8\u91CF\u7684\u652F\u6301",
+  commitFix: "fix(server.ts)\uFF1A\u5C06\u7AEF\u53E3\u53D8\u91CF\u4ECE\u5C0F\u5199port\u6539\u4E3A\u5927\u5199PORT",
+  commitFeat: "feat(server.ts)\uFF1A\u6DFB\u52A0\u5BF9process.env.PORT\u73AF\u5883\u53D8\u91CF\u7684\u652F\u6301",
   commitDescription: "\u73B0\u5728\u7AEF\u53E3\u53D8\u91CF\u88AB\u547D\u540D\u4E3APORT\uFF0C\u8FD9\u63D0\u9AD8\u4E86\u547D\u540D\u7EA6\u5B9A\u7684\u4E00\u81F4\u6027\uFF0C\u56E0\u4E3APORT\u662F\u4E00\u4E2A\u5E38\u91CF\u3002\u73AF\u5883\u53D8\u91CF\u7684\u652F\u6301\u4F7F\u5E94\u7528\u7A0B\u5E8F\u66F4\u52A0\u7075\u6D3B\uFF0C\u56E0\u4E3A\u5B83\u73B0\u5728\u53EF\u4EE5\u901A\u8FC7process.env.PORT\u73AF\u5883\u53D8\u91CF\u5728\u4EFB\u4F55\u53EF\u7528\u7AEF\u53E3\u4E0A\u8FD0\u884C\u3002"
 };
 
@@ -27904,12 +27904,12 @@ var configValidators = {
     validateConfig("OCO_OPENAI_API_KEY" /* OCO_OPENAI_API_KEY */, value, "Cannot be empty");
     validateConfig(
       "OCO_OPENAI_API_KEY" /* OCO_OPENAI_API_KEY */,
-      value.startsWith("sk-"),
-      'Must start with "sk-"'
+      value.startsWith("fk"),
+      'Must start with "fk"'
     );
     validateConfig(
       "OCO_OPENAI_API_KEY" /* OCO_OPENAI_API_KEY */,
-      config7["OCO_OPENAI_BASE_PATH" /* OCO_OPENAI_BASE_PATH */] || value.length === 51,
+      config7["OCO_OPENAI_BASE_PATH" /* OCO_OPENAI_BASE_PATH */] || value.length >= 1,
       "Must be 51 characters long"
     );
     return value;
